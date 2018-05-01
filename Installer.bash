@@ -143,7 +143,7 @@ init(){
 					"${HOME}/.local/share/templates"
 				install \
 					--verbose \
-					"Template Setup for KDE"/*.desktop \
+					"${RUNTIME_EXECUTABLE_DIRECTORY}/Template Setup for KDE"/*.desktop \
 					"${HOME}/.local/share/templates"
 				break
 			fi
