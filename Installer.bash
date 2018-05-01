@@ -39,7 +39,7 @@ for required_command in \
 		esac
 
 		printf --\
-			'Error: This program requires "%s" to be installed and its executables in the executable searching paths.\n'\
+			'Error: This program requires "%s" to be installed and its executables in the executable searching paths.\n' \
 			"${required_software}" 1>&2
 		unset required_software
 	fi
@@ -77,9 +77,9 @@ init(){
 
 	if ! process_commandline_arguments\
 			flag_uninstall; then
-		printf --\
-			'Error: %s: Invalid command-line parameters.\n'\
-			"${FUNCNAME[0]}"\
+		printf -- \
+			'Error: %s: Invalid command-line parameters.\n' \
+			"${FUNCNAME[0]}" \
 			1>&2
 		print_help
 		exit 1
@@ -125,9 +125,9 @@ init(){
 			# lowercasewize
 			answer="$(
 				printf -- \
-					'%s'\
-					"${answer}"\
-					| tr '[:upper:]' '[:lower:]'\
+					'%s' \
+					"${answer}" \
+					| tr '[:upper:]' '[:lower:]'
 			)"
 
 			if [ "${answer}" != n ] && [ "${answer}" != y ]; then
