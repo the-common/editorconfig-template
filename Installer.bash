@@ -111,6 +111,7 @@ init(){
 	install \
 		--verbose \
 		--mode=u=rw,go=r \
+		--directory \
 		"${RUNTIME_EXECUTABLE_DIRECTORY}/EditorConfig Template.editorconfig" \
 		"${install_directory_xdg}"
 	printf '\n' # Seperate output from different operations
@@ -141,11 +142,13 @@ init(){
 				install \
 					--verbose \
 					--mode=u=rw,go=r \
+					--directory \
 					"${RUNTIME_EXECUTABLE_DIRECTORY}/EditorConfig Template.editorconfig" \
 					"${HOME}/.local/share/templates"
 				install \
 					--verbose \
 					--mode=u=rw,go=r \
+					--directory \
 					"${RUNTIME_EXECUTABLE_DIRECTORY}/Template Setup for KDE"/*.desktop \
 					"${HOME}/.local/share/templates"
 				break
