@@ -108,10 +108,12 @@ init(){
 
 	printf -- \
 		'Installing template files...\n'
+	mkdir \
+		--parents \
+		"${XDG_TEMPLATES_DIR}"
 	install \
 		--verbose \
 		--mode=u=rw,go=r \
-		--directory \
 		"${RUNTIME_EXECUTABLE_DIRECTORY}/EditorConfig Template.editorconfig" \
 		"${install_directory_xdg}"
 	printf '\n' # Seperate output from different operations
@@ -139,16 +141,17 @@ init(){
 				break
 			else
 				printf 'Configuring templates for KDE...\n'
+				mkdir \
+					--parents \
+					"${HOME}/.local/share/templates"
 				install \
 					--verbose \
 					--mode=u=rw,go=r \
-					--directory \
 					"${RUNTIME_EXECUTABLE_DIRECTORY}/EditorConfig Template.editorconfig" \
 					"${HOME}/.local/share/templates"
 				install \
 					--verbose \
 					--mode=u=rw,go=r \
-					--directory \
 					"${RUNTIME_EXECUTABLE_DIRECTORY}/Template Setup for KDE"/*.desktop \
 					"${HOME}/.local/share/templates"
 				break
