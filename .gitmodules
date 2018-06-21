@@ -1,5 +1,0 @@
-[submodule "Linters/GNU Bash Automatic Checking Program for Git Projects"]
-	path = Linters/GNU Bash Automatic Checking Program for Git Projects
-	url = https://github.com/Lin-Buo-Ren/GNU-Bash-Automatic-Checking-Program-for-Git-Projects
-	fetchRecurseSubmodules = no
-	ignore = all

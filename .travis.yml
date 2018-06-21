@@ -66,9 +66,7 @@ addons:
   #- mysite.com
 
 ### You can run custom commands before the installation step
-before_install:
-- git submodule init 'Linters/GNU Bash Automatic Checking Program for Git Projects'
-- git submodule update --depth=1
+before_install: true
 
 # Update package cache if package installing is required(requires VM build environment)
 # https://docs.travis-ci.com/user/installing-dependencies/#Installing-Packages-from-a-custom-APT-repository
@@ -76,16 +74,12 @@ before_install:
 
 ### Install/Setup any required dependencies used in continuous integration
 ### https://docs.travis-ci.com/user/installing-dependencies/
-install: true
-#### Traditional package installing(requires VM build environment)
-#- sudo apt-get install
-
-#### Sometimes dependencies needs to be build from source code and install/setup to use it
-#### https://docs.travis-ci.com/user/installing-dependencies/#Installing-Projects-from-Source
+install:
+- pip install --user pre-commit
 
 ### You can run custom commands before the script/build step
 before_script:
-- ./'Linters/GNU Bash Automatic Checking Program for Git Projects/GNU Bash Automatic Checking Program for Git Projects.bash'
+- git diff-tree -z --no-commit-id --name-only -r HEAD | xargs --null pre-commit run --files
 
 ### Put your build scripts here
 script: true
@@ -96,7 +90,8 @@ before_cache: true
 #- rm $HOME/.cabal/logs/build.log
 
 ### Caches non-variating contents to speed up build
-#cache:
+cache:
+  pip: true
   #directories:
   #- $HOME/.cabal
 
