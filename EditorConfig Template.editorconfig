@@ -3,10 +3,10 @@
 # This file is based on The Common EditorConfig Template project
 # https://github.com/Lin-Buo-Ren/the-common-editorconfig-template
 # Public Domain
-## This is the top-most EditorConfig file ##
+## Indicate that is the top-most EditorConfig file to search for ##
 root = true
 
-## Common settings ##
+## Common setting for all files not specified ##
 [*]
 charset = utf-8
 end_of_line = lf
@@ -16,7 +16,7 @@ indent_style = space
 trim_trailing_whitespace = true
 
 [*.{md,mkd,mkdn,markdown}]
-# Trailing whitespace means manual linebreaks
+# Trailing whitespace means manual linebreaks in Markdown thus is not trimmable
 trim_trailing_whitespace = false
 
 [*.{yml,yaml}]
