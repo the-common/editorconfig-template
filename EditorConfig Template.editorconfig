@@ -3,10 +3,10 @@
 # This file is based on The Common EditorConfig Template project
 # https://github.com/Lin-Buo-Ren/the-common-editorconfig-template
 # Public Domain
-## This is the top-most EditorConfig file
+## This is the top-most EditorConfig file ##
 root = true
 
-## Common settings
+## Common settings ##
 [*]
 charset = utf-8
 end_of_line = lf
