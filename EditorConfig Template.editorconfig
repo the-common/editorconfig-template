@@ -16,7 +16,7 @@ indent_style = space
 trim_trailing_whitespace = true
 
 [*.{md,mkd,mkdn,markdown}]
-### Trailing whitespace means manual linebreaks
+# Trailing whitespace means manual linebreaks
 trim_trailing_whitespace = false
 
 [*.{yml,yaml}]
