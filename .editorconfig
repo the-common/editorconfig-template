@@ -30,3 +30,7 @@ indent_style = space
 # Avoid git patch fail to apply due to stripped unmodified lines that contains only spaces
 [/.git/**]
 trim_trailing_whitespace = false
+
+# Vagrant configuration file
+[Vagrantfile]
+indent_size = 2
