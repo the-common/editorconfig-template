@@ -26,3 +26,7 @@ trim_trailing_whitespace = false
 [*.{yml,yaml}]
 indent_size = 2
 indent_style = space
+
+# Avoid git patch fail to apply due to stripped unmodified lines that contains only spaces
+[/.git/**]
+trim_trailing_whitespace = false
