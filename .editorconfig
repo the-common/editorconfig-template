@@ -9,7 +9,7 @@
 # This is the top-most EditorConfig file
 root = true
 
-## Common settings
+# Common settings
 [*]
 end_of_line = lf
 indent_style = tab
@@ -18,7 +18,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 [*.{md,mkd,mkdn,markdown}]
-### Trailing whitespace means manual linebreaks
+# Trailing whitespace means manual linebreaks
 trim_trailing_whitespace = false
 
 [*.{yml,yaml}]
