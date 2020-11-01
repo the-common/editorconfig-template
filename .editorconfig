@@ -34,3 +34,7 @@ trim_trailing_whitespace = false
 # Vagrant configuration file
 [Vagrantfile]
 indent_size = 2
+
+# Makefiles for *Make
+[{Makefile,*.mk}]
+indent_style = tab
