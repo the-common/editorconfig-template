@@ -4,6 +4,9 @@
 # http://yaml.org/
 # This file is based on Configuration Templates for Travis CI
 # https://github.com/Lin-Buo-Ren/Configuration-Templates-for-Travis-CI
+# Copyright 2020 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
+
 ## Project-specific settings
 ### Main programming language used in the project
 ### https://docs.travis-ci.com/user/languages
