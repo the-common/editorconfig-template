@@ -1,9 +1,12 @@
 # Travis CI Configuration
 # https://docs.travis-ci.com
+#
 # This file is in YAML data serialization language.
 # http://yaml.org/
+#
 # This file is based on Configuration Templates for Travis CI
 # https://github.com/Lin-Buo-Ren/Configuration-Templates-for-Travis-CI
+#
 # Copyright 2020 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
 # SPDX-License-Identifier: CC-BY-SA-4.0
 
