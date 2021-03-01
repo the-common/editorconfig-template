@@ -11,6 +11,6 @@ repos:
   - id: check-executables-have-shebangs
   - id: check-byte-order-marker
 - repo: https://github.com/jumanjihouse/pre-commit-hooks
-  rev: 1.6.0
+  rev: 2.1.5
   hooks:
     - id: shellcheck
