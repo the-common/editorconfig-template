@@ -6,3 +6,9 @@ Source: https://gitlab.com/brlin/the-commons-gitattributes-templates
 Files: README* */README*
 Copyright: 2021 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
 License: WTFPL
+
+# FIXME: Should be "CC-BY-SA-4.0+", but currently reuse-util can't handle it
+# https://github.com/fsfe/reuse-tool/issues/275
+Files: continuous-integration/README*
+Copyright: 2021 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
+License: CC-BY-SA-4.0
