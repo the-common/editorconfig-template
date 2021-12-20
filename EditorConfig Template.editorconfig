@@ -33,6 +33,10 @@ indent_size = unset
 [*.{yml,yaml}]
 indent_size = 2
 
+# yamllint configuration files
+[.yamllint]
+indent_size = 2
+
 # Avoid git patch fail to apply due to stripped unmodified lines that contains only spaces
 [/.git/**]
 trim_trailing_whitespace = false
