@@ -24,6 +24,11 @@ trim_trailing_whitespace = true
 # Trailing whitespace means manual linebreaks
 trim_trailing_whitespace = false
 
+# Don't check indentation size as it can't handle intentional indentation
+# in list item after hardbreaks to align with the node markers, use
+# Markdownlint to check instead
+indent_size = unset
+
 # YAML documents
 [*.{yml,yaml}]
 indent_size = 2
