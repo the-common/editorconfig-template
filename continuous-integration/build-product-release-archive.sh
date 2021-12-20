@@ -13,8 +13,8 @@ PRODUCT_IDENTIFIER="${PRODUCT_IDENTIFIER:-${DRONE_REPO#*/}}"
 
 apk add \
     git \
-	gzip \
-	tar
+    gzip \
+    tar
 
 git_describe="$(
     git describe \
@@ -26,10 +26,10 @@ product_version="${git_describe#v}"
 product_release_id="${PRODUCT_IDENTIFIER}"-"${product_version}"
 
 git archive \
-	--format tar.gz \
-	--prefix "${product_release_id}"/ \
-	--output "${product_release_id}".tar.gz \
-	HEAD
+    --format tar.gz \
+    --prefix "${product_release_id}"/ \
+    --output "${product_release_id}".tar.gz \
+    HEAD
 
 echo
 echo Product release archive generated successfully.
