@@ -115,8 +115,8 @@ init(){
 	install \
 		--verbose \
 		--mode=u=rw,go=r \
-		"${RUNTIME_EXECUTABLE_DIRECTORY}/EditorConfig Template.editorconfig" \
-		"${install_directory_xdg}"
+		"${RUNTIME_EXECUTABLE_DIRECTORY}/.editorconfig" \
+		"${install_directory_xdg}/EditorConfig Template.editorconfig"
 	printf '\n' # Seperate output from different operations
 
 	while true; do
@@ -148,8 +148,8 @@ init(){
 				install \
 					--verbose \
 					--mode=u=rw,go=r \
-					"${RUNTIME_EXECUTABLE_DIRECTORY}/EditorConfig Template.editorconfig" \
-					"${HOME}/.local/share/templates"
+					"${RUNTIME_EXECUTABLE_DIRECTORY}/.editorconfig" \
+					"${HOME}/.local/share/templates/EditorConfig Template.editorconfig"
 				install \
 					--verbose \
 					--mode=u=rw,go=r \

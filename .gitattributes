@@ -15,6 +15,7 @@
 # Exclude development assets from source archive
 /.* export-ignore
 /continuous-integration/ export-ignore
+/.editorconfig -export-ignore
 
 # Exclude development assets exclusive licenses
 /LICENSES/CC-BY-SA-* export-ignore
