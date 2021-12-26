@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: The Commons EditorConfig Template
 Upstream-Contact: 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
-Source: https://gitlab.com/brlin/the-commons-gitattributes-templates
+Source: https://github.com/the-common/editorconfig-template
 
 Files: README* */README*
 Copyright: 2021 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
