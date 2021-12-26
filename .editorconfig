@@ -20,7 +20,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 # Git configuration files uses tabs as indentation units
-[.git**]
+[.git*]
 indent_style = tab
 
 # Avoid git patch fail to apply due to stripped unmodified lines that contains only spaces
