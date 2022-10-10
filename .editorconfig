@@ -41,6 +41,10 @@ trim_trailing_whitespace = false
 # Markdownlint to check instead
 indent_size = unset
 
+[*.{diff,patch}]
+# Trailing whitespaces are unchanged lines in patch files
+trim_trailing_whitespace = false
+
 # Vagrant configuration file
 [Vagrantfile]
 indent_size = 2
