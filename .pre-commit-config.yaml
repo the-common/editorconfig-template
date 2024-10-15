@@ -1,17 +1,75 @@
-# Configuration for pre-commit: A framework for managing and maintaining multi-language pre-commit hooks.
-# https://pre-commit.com/
+# Pre-commit framework Configuration
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
 #
-# Copyright 2021 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
-# SPDX-License-Identifier: WTFPL
-repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
-  hooks:
-  - id: check-yaml
-  - id: check-executables-have-shebangs
-  - id: check-byte-order-marker
+# This file is based on The Common Pre-commit Framework Configuration Template
+# https://github.com/Lin-Buo-Ren/common-precommit-config-template
+#
+# Copyright 2021 林博仁(Buo-ren, Lin) <buo.ren.lin@gmail.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
 
-- repo: https://github.com/jumanjihouse/pre-commit-hooks
-  rev: 2.1.5
-  hooks:
-    - id: shellcheck
+repos:
+  # Some out-of-the-box hooks for pre-commit
+  # https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.3.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-vcs-permalinks
+      - id: check-yaml
+      - id: detect-aws-credentials
+        args:
+          - --allow-missing-credentials
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+        args:
+          - --markdown-linebreak-ext=md
+
+  # Check Markdown documents with Markdownlint(Node.js variant)
+  # https://github.com/DavidAnson/markdownlint
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.34.0
+    hooks:
+      - id: markdownlint
+
+  # Check REUSE compliance
+  # https://reuse.software/
+  - repo: https://github.com/fsfe/reuse-tool
+    rev: v4.0.3
+    hooks:
+      - id: reuse
+
+  # Check shell scripts with ShellCheck
+  # NOTE: ShellCheck must be available in the command search PATHs
+  # https://www.shellcheck.net/
+  # https://github.com/jumanjihouse/pre-commit-hooks#shellcheck
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: shellcheck
+
+  # Check YAML files
+  # https://github.com/adrienverge/yamllint
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.30.0
+    hooks:
+      - id: yamllint
+
+  # Check EditorConfig style compliance
+  # https://github.com/editorconfig-checker/editorconfig-checker.python
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 2.7.3
+    hooks:
+      - id: editorconfig-checker
+        alias: ec
+        exclude: |
+          (?ix)^(
+            LICENSES/.*
+          )$
