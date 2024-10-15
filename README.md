@@ -7,7 +7,11 @@ A simple [EditorConfig](http://editorconfig.org/) template to reuse.
 
 ## References
 
-To be addressed.
+The following material are referenced during the development of this product:
+
+* [EditorConfig](https://editorconfig.org/)  
+  [EditorConfig Specification — EditorConfig Specification documentation](https://spec.editorconfig.org/)  
+  Explains the syntax of EditorConfig.
 
 ## Licensing
 
