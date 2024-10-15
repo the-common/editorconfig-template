@@ -1,4 +1,4 @@
-# The Common EditorConfig Template
+# The common EditorConfig template
 
 A simple [EditorConfig](http://editorconfig.org/) template to reuse.
 
