@@ -2,7 +2,7 @@
 # shellcheck disable=SC2034
 
 # Install the product into the system
-# 林博仁 © 2018
+# Copyright 2024 林博仁(Buo-ren Lin) <buo.ren.lin@gmail.com>
 # SPDX-License-Identifier: WTFPL
 
 ## Makes debuggers' life easier - Unofficial Bash Strict Mode
